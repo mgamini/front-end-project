@@ -2,6 +2,7 @@
 /*  http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
 html {
   box-sizing: border-box;
+  padding: 0px;
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -9,7 +10,30 @@ html {
 
 #container {
   margin: 0px auto;
-  float: left;
+}
+
+.navigation {
+  background-color: #00A1D3;
+  height: 43px;
+}
+
+.navigation > ul > li > a {
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.navigation > ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px 0px 0px 10px;
+}
+
+.navigation > ul > li {
+  display: inline-block;
+  height: 43px;
+  line-height: 43px;
+  padding: 0px 10px;
 }
 
 #banner_hero {
@@ -21,6 +45,12 @@ html {
   background-position: center;
   background-repeat: no-repeat;
   float: left;
+}
+
+body {
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  margin: 0px;
 }
 
 .row {
@@ -42,6 +72,10 @@ html {
     height: 86px;
     margin-top: 28px;
   }
+}
+
+.navigation {
+  background-color: #00A1D3;
 }
 
 
