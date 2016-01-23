@@ -1,22 +1,48 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+/*  http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+#container {
+  margin: 0px auto;
+  float: left;
+}
+
 #banner_hero {
-  position: relative;
-  left: 0;
-  top: 0;
-}
-
-#large_banner {
   width: 100%;
-  position: relative;
-  left: 0;
-  top: 0;
 }
 
-#logo_in_banner {
-  position: absolute;
-  top: 30px;
-  left: 70px;
+#banner_logo {
+  background-color: #fff;
+  background-position: center;
+  background-repeat: no-repeat;
+  float: left;
 }
 
+.row {
+  float: left;
+  width: 100%;
+}
+
+@media (min-width: 769px) {
+  #container {
+    max-width: 980px;
+  }
+  #banner_hero {
+    background: url('../images/banner_large.jpg') top center no-repeat;
+    height: 275px;
+  }
+  #banner_logo {
+    background-image: url('../images/logo_large.png');
+    width: 210px;
+    height: 86px;
+    margin-top: 28px;
+  }
+}
 
 
 /*
