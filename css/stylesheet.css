@@ -1,0 +1,34 @@
+#banner_hero {
+  position: relative;
+  left: 0;
+  top: 0;
+}
+
+#large_banner {
+  width: 100%;
+  position: relative;
+  left: 0;
+  top: 0;
+}
+
+#logo_in_banner {
+  position: absolute;
+  top: 30px;
+  left: 70px;
+}
+
+
+
+/*
+• body copy & headers: #333333
+• nav links: #ffffff
+• blue color: #00A1D3
+• red warning: #ff0000
+• body: 14px, Arial
+• nav: 13px (font-size)
+• main header: <h1> 28px (font-size)
+• profile sub headers: <h3> 16px (font-size)
+• profile text & text links: inherited from body
+• form labels: 11px (font-size)
+• footer: 12px (font-size)
+*/
