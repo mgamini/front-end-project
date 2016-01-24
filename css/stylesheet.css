@@ -87,19 +87,21 @@ body {
   width: 100%;
 }
 
-  #container {
-    max-width: 980px;
-  }
-  #banner_hero {
-    background: url('../images/banner_large.jpg') top center no-repeat;
-    height: 275px;
-  }
-  #banner_logo {
-    background-image: url('../images/logo_large.png');
-    width: 210px;
-    height: 86px;
-    margin-top: 28px;
-  }
+#container {
+  max-width: 980px;
+}
+
+#banner_hero {
+  background: url('../images/banner_large.jpg') top center no-repeat;
+  height: 275px;
+}
+
+#banner_logo {
+  background-image: url('../images/logo_large.png');
+  width: 210px;
+  height: 86px;
+  margin-top: 28px;
+}
 
 @media (max-width: 769px) {
   #container {
@@ -145,6 +147,7 @@ body {
 footer {
   font-style: italic;
   padding-left: 10px;
+  color: #ccc;
 }
 
 fieldset {
@@ -160,10 +163,20 @@ label.form-required > .form-label:after {
 }
 
 input[type="text"] {
+  outline-color: red;
+  outline-width: 2px;
   border-radius: 5px;
   border: 1px solid #ccc;
   height: 30px;
   line-height: 30px;
+}
+
+button {
+  background-color: #00A1D3;
+  color: white;
+  border-radius: 3px;
+  height: 30px;
+  width: 150px;
 }
 
 
