@@ -173,10 +173,36 @@ body {
     margin-top: 12px;
   }
 
+  section.two_thirds {
+    width: 100%
+  }
+
+  .half, .two_third, .one_third {
+    width: 100%
+  }
+
+  .image_left {
+    float: left;
+  }
+
+  .p_right {
+    float: right;
+  }
+
+  .mobile_profile {
+    margin: 10px 50px;
+  }
+
   .divider_line {
+    clear: both;
     background-color: #ccc;
-    height: 10px;
-    width: 300px;
+    height: 1px;
+    width: 100%;
+    margin: 10px;
+  }
+
+  #contact_us_button {
+    width: 100%;
   }
 
   .blue_bar {
