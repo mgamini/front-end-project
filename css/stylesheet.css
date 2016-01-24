@@ -142,6 +142,7 @@ body {
 .more_arrow {
   background: url("../images/cta_arrow.png") right 2px no-repeat;
   padding-right: 13px;
+  text-decoration: none;
 }
 
 footer {
