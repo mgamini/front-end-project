@@ -87,7 +87,6 @@ body {
   width: 100%;
 }
 
-@media (min-width: 769px) {
   #container {
     max-width: 980px;
   }
@@ -100,6 +99,37 @@ body {
     width: 210px;
     height: 86px;
     margin-top: 28px;
+  }
+
+@media (max-width: 769px) {
+  #container {
+    max-width: 768px;
+  }
+  #banner_hero {
+    background: url('../images/banner_medium.jpg') top center no-repeat;
+    height: 200px;
+  }
+  #banner_logo {
+    background-image: url('../images/logo_medium.png');
+    width: 157px;
+    height: 64px;
+    margin-top: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  #container {
+    max-width: 480px;
+  }
+  #banner_hero {
+    background: url('../images/banner_small.jpg') top center no-repeat;
+    height: 85px;
+  }
+  #banner_logo {
+    background-image: url('../images/logo_small.png');
+    width: 145px;
+    height: 50px;
+    margin-top: 12px;
   }
 }
 
