@@ -4,17 +4,24 @@ html {
   box-sizing: border-box;
   padding: 0px;
 }
+
 *, *:before, *:after {
   box-sizing: inherit;
+}
+
+a {
+  color: #00A1D3;
 }
 
 #container {
   margin: 0px auto;
 }
 
-.navigation {
+.blue_bar {
   background-color: #00A1D3;
+  line-height: 43px;
   height: 43px;
+  color: white;
 }
 
 .navigation > ul > li > a {
@@ -31,8 +38,6 @@ html {
 
 .navigation > ul > li {
   display: inline-block;
-  height: 43px;
-  line-height: 43px;
   padding: 0px 10px;
 }
 
@@ -51,6 +56,30 @@ body {
   font-size: 14px;
   font-family: Arial, sans-serif;
   margin: 0px;
+}
+
+.content {
+  padding: 20px;
+}
+
+.two_thirds {
+  width: 66%;
+}
+
+.one_third {
+  width: 33%;
+}
+
+.float_left {
+  float: left;
+}
+
+.half {
+  width: 50%;
+}
+
+.full {
+  width: 100%;
 }
 
 .row {
@@ -76,6 +105,35 @@ body {
 
 .navigation {
   background-color: #00A1D3;
+}
+
+.more_arrow {
+  background: url("../images/cta_arrow.png") right 2px no-repeat;
+  padding-right: 13px;
+}
+
+footer {
+  font-style: italic;
+  padding-left: 10px;
+}
+
+fieldset {
+  border: none;
+}
+
+.form-label {
+
+}
+
+label.form-required > .form-label:after {
+  content: "*";
+}
+
+input[type="text"] {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  height: 30px;
+  line-height: 30px;
 }
 
 
