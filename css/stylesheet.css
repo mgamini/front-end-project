@@ -161,6 +161,10 @@ fieldset {
   font-size: 11px;
 }
 
+.form-required.error > input {
+  border-color: red;
+}
+
 label.form-required > .form-label:after {
   content: "*";
 }

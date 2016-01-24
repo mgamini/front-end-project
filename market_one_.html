@@ -54,27 +54,27 @@
             <fieldset>
               <label class="form-required">
                 <p class="form-label">First Name</p>
-                <input class="full" type="text" />
+                <input name="first_name" class="full" type="text" data-validator="string" />
               </label>
               <label class="form-required">
                 <p class="form-label">Last Name</p>
-                <input class="full" type="text" />
+                <input name="last_name" class="full" type="text" data-validator="string" />
               </label>
               <label class="form-required">
                 <p class="form-label">Title</p>
-                <input class="full" type="text" />
+                <input name="title" class="full" type="text" data-validator="string" />
               </label>
               <label class="form-required">
                 <p class="form-label">Email Address</p>
-                <input class="full" type="text" />
+                <input name="email_address" class="full" type="text" data-validator="email" />
               </label>
               <label class="form-required">
                 <p class="form-label">Phone</p>
-                <input class="full" type="text" />
+                <input name="phone" class="full" type="text" data-validator="phone" />
               </label>
               <label class="form-required">
                 <p class="form-label">Already A Client?</p>
-                <select class="full">
+                <select name="already_client" class="full" data-validator="select">
                   <option value="select">--Please Select--</option>
                   <option value="yes">Yes</option>
                   <option value="no">No</option>
@@ -91,6 +91,58 @@
         <span>Copyright &copy; 2013 MarketOne International.  All rights reserved.</span>
       </footer>
     </div>
+
+    <script>
+      var FORM = {};
+      var MINIMUM_STRING_LENGTH = 5;
+      // http://stackoverflow.com/questions/4338267/validate-phone-number-with-javascript
+      var PHONE_RE = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
+      // http://stackoverflow.com/questions/2507030/email-validation-using-jquery
+      var EMAIL_RE = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+      var validators = {
+        string: function(input) {
+          return input.length > MINIMUM_STRING_LENGTH
+        },
+        phone: function(input) {
+          return PHONE_RE.test(input);
+        },
+        email: function(input) {
+          return EMAIL_RE.test(input);
+        },
+        select: function(input) {
+          return input !== "";
+        }
+      }
+
+      $(document).ready(function() {
+        $('form label.form-required > input, form label.form-required > select').each(function(idx, item) {
+          item = $(item);
+          FORM[item.attr('name')] = {e: item, validator: item.attr('data-validator')}
+        })
+
+        $('form').on('submit', function(event) {
+          event.preventDefault();
+          console.log($(this).serializeArray())
+          validateForm($(this).serializeArray())
+        })
+
+        function validateForm(serArray) {
+          var results = [];
+          serArray.forEach(function(item) {
+            var isvalid = validators[FORM[item.name].validator](item.value);
+
+            if (!isvalid) {
+              FORM[item.name].e.parent().addClass('error')
+            }
+
+            results.push(isvalid);
+          })
+
+          return results.every(function(item) { return item; })
+        }
+      })
+    </script>
   </body>
 </html>
 
