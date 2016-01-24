@@ -98,6 +98,17 @@ body {
 
 .welcome_profile {
   width: 50%;
+  margin-top: 20px;
+  padding: 0px 20px 0px 80px;
+  position: relative;
+}
+.welcome_profile > img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.welcome_profile > h3 {
+  margin-top: 0px;
 }
 
 .full {
