@@ -10,7 +10,23 @@ html {
 }
 
 a {
-  color: #00A1D3;
+  color: #333333;
+}
+
+a:hover {
+  color: #00A1D3
+}
+
+h1, h4, body {
+  color: #333333;
+}
+
+h1 {
+  font-size: 21px;
+}
+
+h3 {
+  font-size: 16px;
 }
 
 #container {
@@ -22,6 +38,10 @@ a {
   line-height: 43px;
   height: 43px;
   color: white;
+}
+
+.navigation {
+  font-size: 13px;
 }
 
 .navigation > ul > li > a {
@@ -107,10 +127,12 @@ body {
   #container {
     max-width: 768px;
   }
+
   #banner_hero {
     background: url('../images/banner_medium.jpg') top center no-repeat;
     height: 200px;
   }
+
   #banner_logo {
     background-image: url('../images/logo_medium.png');
     width: 157px;
@@ -123,15 +145,43 @@ body {
   #container {
     max-width: 480px;
   }
+
+  .navigation {
+    height: 225px;
+  }
+
+  .navigation > ul {
+    margin: 20px;
+  }
+
+  .navigation > ul > li {
+    width: 100%;
+    border: 1px solid;
+    border-radius: 10px;
+    background: url("../images/mobile_link_arrow.png") right 13px no-repeat;
+  }
+
   #banner_hero {
     background: url('../images/banner_small.jpg') top center no-repeat;
     height: 85px;
   }
+
   #banner_logo {
     background-image: url('../images/logo_small.png');
     width: 145px;
     height: 50px;
     margin-top: 12px;
+  }
+
+  .divider_line {
+    background-color: #ccc;
+    height: 10px;
+    width: 300px;
+  }
+
+  .blue_bar {
+    background-color: white;
+    color: #ccc;
   }
 }
 
@@ -146,6 +196,7 @@ body {
 }
 
 footer {
+  font-size: 12px;
   font-style: italic;
   padding-left: 10px;
   color: #ccc;
@@ -156,7 +207,7 @@ fieldset {
 }
 
 .form-label {
-
+  font-size: 11px;
 }
 
 label.form-required > .form-label:after {
@@ -164,7 +215,7 @@ label.form-required > .form-label:after {
 }
 
 input[type="text"] {
-  outline-color: red;
+  outline-color: #ff0000;
   outline-width: 2px;
   border-radius: 5px;
   border: 1px solid #ccc;
