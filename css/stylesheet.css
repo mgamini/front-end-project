@@ -228,7 +228,11 @@ input[type="text"] {
   .welcome_profile {
     width: 100%;
     border-top: 1px solid #ccc;
-    padding: 20px;
+    padding: 20px 20px 20px 80px;
+  }
+
+  .welcome_profile > img {
+    top: 20px;
   }
 
   #welcome { width: 100%; }
